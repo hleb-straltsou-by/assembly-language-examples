@@ -3,7 +3,7 @@
 
 .data 
     MSG1 db 10, 13, "Enter any string: $"
-    MSG2 db 10, 13, "Reverse string is: $"
+    MSG2 db 10, 13, "Sorted string: $"
     ENDL db 10, 13, "$"
     LENGTH equ 200
     STRING db LENGTH            ; max count of chars
@@ -54,7 +54,7 @@ start:
     DISPLAY_RAW STRING
     
     mov ax, 4c00h
-    int 21h
+    int 21h    
 end start 
 code ends
 
