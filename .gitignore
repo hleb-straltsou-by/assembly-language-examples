@@ -2,3 +2,5 @@
 *.list
 *.~asm
 *.symbol
+*.exe
+*.com
