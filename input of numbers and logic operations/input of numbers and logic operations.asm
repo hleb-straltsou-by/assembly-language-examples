@@ -1,11 +1,20 @@
 name "number"                        ; output file name (max 8 chars for DOS compatibility)   
 
-use16			    
-org 100h		   
+use16			                     ; command to generate 16-bit code
+org 100h		                     ; program begins from address 100h  
 
 begin:
+    ; input of first number
+    mov di, input_first_number_message
+    call PRINT_STRING
+    call PRINT_ENDLINE
     call INPUT_NUMBER
     mov cx, ax
+    
+    ;input of second number
+    mov di, input_second_number_message
+    call PRINT_STRING
+    call PRINT_ENDLINE
     call INPUT_NUMBER
     mov bx, ax
     
@@ -44,10 +53,12 @@ begin:
     call PRINT_NUMBER
     call PRINT_ENDLINE     
         
-    call exit
+    call EXIT
 
 ; **** PROCEDURES ****
 
+; Procedure for input number through the console
+; output: ax - will contain input value 
 INPUT_NUMBER:
     mov di, input_number_message
     call PRINT_STRING		   
@@ -56,12 +67,13 @@ INPUT_NUMBER:
     jc INPUT_NUMBER_ERROR
     ret  	    
 INPUT_NUMBER_ERROR:
-    mov di, s_error
+    mov di, error_message
     call PRINT_STRING		    
     jmp INPUT_NUMBER	    	    
 
-exit:
-    mov di, s_pak
+; Procedure to exit program
+EXIT:
+    mov di, press_any_key_message
     call PRINT_STRING		    
     mov ah,8		    
     int 21h
@@ -69,6 +81,7 @@ exit:
     mov ax,4C00h	    
     int 21h		   
 
+; Procedure to input decimal word (number)
 INPUT_DECIMAL_WORD:
     push dx		    
     mov al, 6                           ;put to al max size of input number digits - 1, last - $		    
@@ -77,6 +90,11 @@ INPUT_DECIMAL_WORD:
     pop dx		    
     ret
 
+; Procedure to transforming string into decimal word
+; input:  dx - adress of input string
+;         al - length of string
+; output: ax - result word (number), if there is mistake - ax = 0
+;         CF = 1 - mistake identifier
 STRING_TO_DECIMAL_WORD:
     push cx		   
     push dx
@@ -118,6 +136,10 @@ INPUT_END:
     pop cx
     ret
 
+; Procedure for input of string
+; Input:  al - max length of string (without symbol CR)
+; Output: al - length of input string (without symbol CR)
+;         dx - address of string that ends with CR(0dh)
 INPUT_STRING:                           
     push cx		    
     mov cx,ax		   
@@ -132,6 +154,8 @@ INPUT_STRING:
     pop cx		    
     ret
 
+; Procedure of output of string througth the console
+; input: di - address of string
 PRINT_STRING:
     push ax
     mov ah,9		    
@@ -141,7 +165,7 @@ PRINT_STRING:
     pop ax
     ret
 
-
+; Procedure for output endline through the console
 PRINT_ENDLINE:
     push di
     mov di,endline	    
@@ -149,6 +173,7 @@ PRINT_ENDLINE:
     pop di
     ret
 
+; Procedure for output number through the console
 PRINT_NUMBER:
     push di
     mov di,buffer	   
@@ -159,7 +184,8 @@ PRINT_NUMBER:
     call PRINT_STRING	   
     pop di
     ret
-    
+
+; Procedure for transforming decimal word (number) through the console   
 DECIMAL_WORD_TO_STRING:                
     push ax
     push cx
@@ -190,14 +216,16 @@ NUMBER_TO_STRING_LOOP2:		              ;cycle for extracting symbols from stack
     ret
     
 input_number_message  db 'input number: $'
-s_error  db 'ERROR!',13,10,'$'
+error_message  db 'INPUT EXCEPTION!',13,10,'$'
 and_result_message db 'Result of AND operation between input numbers: $'
 or_result_message db 'Result of OR operation between input numbers: $'
 xor_result_message db 'Result of XOR operation between input numbers: $'
 not_result_message db 'Result of NOT operation on first number: $'
-s_pak	 db 'Press any key...$'
-endline  db 13,10,'$'
+input_first_number_message db 'Input first number$' 
+input_second_number_message db 'Input second number$'
+press_any_key_message	 db 'Press any key...$'
 buffer	 rb 9
 string_number db 5 dup(?),'$'
-string_end = $-1  
+string_end = $-1
+endline  db 13,10,'$'  
     
