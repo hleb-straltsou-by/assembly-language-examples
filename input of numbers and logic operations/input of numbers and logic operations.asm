@@ -1,7 +1,7 @@
 name "number"                        ; output file name (max 8 chars for DOS compatibility)   
 
-use16			    
-org 100h		   
+use16			                     ; command to generate 16-bit code
+org 100h		                     ; program begins from address 100h  
 
 begin:
     ; input of first number
@@ -71,6 +71,7 @@ INPUT_NUMBER_ERROR:
     call PRINT_STRING		    
     jmp INPUT_NUMBER	    	    
 
+; Procedure to exit program
 EXIT:
     mov di, press_any_key_message
     call PRINT_STRING		    
@@ -80,6 +81,7 @@ EXIT:
     mov ax,4C00h	    
     int 21h		   
 
+; Procedure to input decimal word (number)
 INPUT_DECIMAL_WORD:
     push dx		    
     mov al, 6                           ;put to al max size of input number digits - 1, last - $		    
@@ -88,6 +90,11 @@ INPUT_DECIMAL_WORD:
     pop dx		    
     ret
 
+; Procedure to transforming string into decimal word
+; input:  dx - adress of input string
+;         al - length of string
+; output: ax - result word (number), if there is mistake - ax = 0
+;         CF = 1 - mistake identifier
 STRING_TO_DECIMAL_WORD:
     push cx		   
     push dx
@@ -130,7 +137,7 @@ INPUT_END:
     ret
 
 ; Procedure for input of string
-; Input: al - max length of string (without symbol CR)
+; Input:  al - max length of string (without symbol CR)
 ; Output: al - length of input string (without symbol CR)
 ;         dx - address of string that ends with CR(0dh)
 INPUT_STRING:                           
@@ -209,7 +216,7 @@ NUMBER_TO_STRING_LOOP2:		              ;cycle for extracting symbols from stack
     ret
     
 input_number_message  db 'input number: $'
-error_message  db 'ERROR!',13,10,'$'
+error_message  db 'INPUT EXCEPTION!',13,10,'$'
 and_result_message db 'Result of AND operation between input numbers: $'
 or_result_message db 'Result of OR operation between input numbers: $'
 xor_result_message db 'Result of XOR operation between input numbers: $'
@@ -217,8 +224,8 @@ not_result_message db 'Result of NOT operation on first number: $'
 input_first_number_message db 'Input first number$' 
 input_second_number_message db 'Input second number$'
 press_any_key_message	 db 'Press any key...$'
-endline  db 13,10,'$'
 buffer	 rb 9
 string_number db 5 dup(?),'$'
-string_end = $-1  
+string_end = $-1
+endline  db 13,10,'$'  
     
