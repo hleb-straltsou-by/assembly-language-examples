@@ -51,7 +51,7 @@ hello_message db 020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020
               db 020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh
 
  snake_world  db 020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh
-              db 020h,00Fh,052h,00Fh,065h,00Fh,06Dh,00Fh,061h,00Fh,069h,00Fh,06Eh,00Fh,069h,00Fh,06Eh,00Fh,067h,00Fh,020h,00Fh,06Ch,00Fh,065h,00Fh,074h,00Fh,074h,00Fh,065h,00Fh,072h,00Fh,073h,00Fh,020h,00Fh,020h,00Fh,067h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh
+              db 020h,00Fh,052h,00Fh,065h,00Fh,06Dh,00Fh,061h,00Fh,069h,00Fh,06Eh,00Fh,069h,00Fh,06Eh,00Fh,067h,00Fh,020h,00Fh,06Ch,00Fh,065h,00Fh,074h,00Fh,074h,00Fh,065h,00Fh,072h,00Fh,073h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh
               db 020h,00Fh,041h,00Fh,020h,00Fh,042h,00Fh,020h,00Fh,043h,00Fh,020h,00Fh,044h,00Fh,020h,00Fh,045h,00Fh,020h,00Fh,046h,00Fh,020h,00Fh,047h,00Fh,020h,00Fh,048h,00Fh,020h,00Fh,049h,00Fh,020h,00Fh,04Ah,00Fh,020h,00Fh,04Bh,00Fh,020h,00Fh,04Ch,00Fh,020h,00Fh,04Dh,00Fh,020h,00Fh,04Eh,00Fh,020h,00Fh,04Fh,00Fh,020h,00Fh,050h,00Fh,020h,00Fh,051h,00Fh,020h,00Fh,052h,00Fh,020h,00Fh,053h,00Fh,020h,00Fh,054h,00Fh,020h,00Fh,055h,00Fh,020h,00Fh,056h,00Fh,020h,00Fh,057h,00Fh,020h,00Fh,058h,00Fh,020h,00Fh,059h,00Fh,020h,00Fh,05Ah,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh
               db 020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh
               db 020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh
@@ -72,15 +72,42 @@ hello_message db 020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020
               db 020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh
               db 020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh
               db 020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh
+              db 020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh
+              db 020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh
+              db 020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh
+              
+game_over_label db 020h,00Fh,020h,00Fh,035h,00Fh,035h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,035h,00Fh,020h,00Fh,035h,00Fh,035h,00Fh,020h,00Fh,035h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,035h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh
+                db 020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh
+                db 020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh
+                db 020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,035h,00Fh,035h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,035h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh
+                db 020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh
+                db 020h,00Fh,020h,00Fh,035h,00Fh,035h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,035h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh
+                db 020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh
+                db 020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh
+                db 020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh
+                db 020h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,035h,00Fh,035h,00Fh,035h,00Fh,020h,00Fh,035h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh
+                db 020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh
+                db 020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh
+                db 020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,035h,00Fh,035h,00Fh,035h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh
+                db 020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh
+                db 020h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,035h,00Fh,035h,00Fh,035h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,035h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh
+                db 020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh
+                db 020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh
+                db 020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh
+                db 020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh
+                db 020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh
+                db 020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh
+                db 020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh
+                
                  
 ; variables that are used for snake structure    
 ; 'snake' array: each item holds: x cord, y cord, ascii char and attribute (always black background)  
 ; its length is 80x25=2000 (dimenstions of screen) 
 ; 5 first items are inited to white '*'-s from (20,10) to (20,14)  
-  snake DD 0d010a14h,0f2a0b14h,0f2a0c14h,0f2a0d14h,0f2a0e14h   
-  snake2 DW 1995 DUP(?) ; the bug:        definition of double-word-array  doesn't work properly with 'dup'   
-  snake3 DW 1995 DUP(?) ; the workaround: defining two word-arrays 
-   
+  snake DD 0d010a14h,0f2a0b14h,0f2a0c14h,0f2a0d14h,0f2a0e14h
+  snake2 DW 1995 DUP(?)    
+  snake3 DW 1995 DUP(?)   
+  
   length DW 5           ; current length of snake
   sorting_length DW 0   ; length for sorting   
 
@@ -88,8 +115,8 @@ hello_message db 020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020
   food_x    DB 7					; cordinates of the next food 
   food_y    DB 7					; 
   attribute DB 15					; color of next food 
-  char      DB 41h				; char of next food 
-  food_type DB 1  	; type of next food,
+  char      DB 41h				    ; char of next food 
+  food_type DB 1  	                ; type of next food,
 				    ; 0: '-' (makes snake smaller), o.w: ABC char  
 
 ; variables for current food 
@@ -101,7 +128,14 @@ hello_message db 020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020
 ; flags 
   to_exit 		DB 0					; exit flag 
   to_restart 	DB 0					; restart flag 
-  game_over 	DB 0					; game over flag 
+  game_over 	DB 0					; game over flag
+
+; utils
+  simple_space DB 020h, 00Fh
+    
+; letters addresses
+  letters_addresses_begin equ 0142h
+   
 ; misc   
   direction 	DB UP				    ; 1-up,2-down,3-right,4-left   
   loop_counter 	DB 0                         
@@ -109,7 +143,7 @@ hello_message db 020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020
   loop_counter3 	DB 0 
    
   grow_state 	DB NO_CHANGE ; options: NO_CHANGE, BIGGER or SMALLER 
-                                              
+                                           
   ezer_word  	DW 0 
   ezer_byte  	DB 0 
   ezer_byte2 	DB 0  
@@ -117,7 +151,7 @@ hello_message db 020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020
 						            ; cycle in main_loop 
   one_before 	DB 0		        ; flag to use in 'erase_tail' (see there)                                         
  
-.code    
+.code      
   mov ax,@data ; ds<-@data 
   mov ds,ax
   
@@ -178,7 +212,7 @@ hello_message db 020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020
   jmp main_loop 
  
   game_over_loop:                     ; loop for game-over state. no action until 'R' or 'Q' are pressed 
-    cmp to_exit,1 
+       cmp to_exit,1 
     jz program_end 
     cmp to_restart,1 
     jz program_restart 
@@ -188,11 +222,26 @@ hello_message db 020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020
     call restart_game    
   jmp main_loop 
                 
-  program_end:                        ; exits game 
+  program_end:  
+    ; sending to es beginning of the video memory
+    push 0b800h
+    pop es
+           
+    ; draw hello message
+    mov cx, 0dc0h                   ; count of bytes for transfer
+    mov di, 00h
+    lea si, game_over_label
+    cld                             ; moving v praymom dvizenii
+    rep movsb
+    
+    ; waiting for clicking
+    mov ah, 00h
+    int 16h
+         
     mov ah,4ch 
     int 21h    
      
-; -- routines -- ;   
+; -- routines -- ;                                                                  
     
   actions: ; actions to perform after per one move   
      mov al,direction_for_next_cycle  
@@ -225,8 +274,7 @@ hello_message db 020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020
         call remove_part  
         jmp check_eating_end: 
         check_eating_label1: 
-        call add_part
-        ;call sort_snake  
+        call add_part  
       check_eating_end:   
   ret ; used by 'actions' 
    
@@ -248,12 +296,51 @@ hello_message db 020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020h,00Fh,020
       mov ds:[bx],al 
       inc bx  
       mov al,cur_food_attribute 
-      mov ds:[bx],al       
-  ret ; used by 'check_eating' 
+      mov ds:[bx],al
+      
+      push 0b800h
+      pop es
+      
+      call update_remaining_letters       
+  ret ; used by 'check_eating'
+  
+  update_remaining_letters:
+     push ax
+     push cx
+     push di
+     push si
+     push bx
+     
+    ; mov cx, 2
+    ; mov di, 142h           ; address of letter A = 142h
+    ; lea si, simple_space   ; send to si space symbol
+    ; cld
+    ; rep movsb              ; sending data 
+     
+     xor ax, ax
+     add al, cur_food_char   ; mov to al current eating letter
+     sub ax, 41h             ; get difference between letters
+     mov bx, 4               ; multyply on 2 elements (= 4 bytes)
+     mul bx
+     add ax, letters_addresses_begin  ; calculate result address of letter from alphabet
+          
+     mov cx, 2
+     mov di, ax
+     lea si, simple_space
+     cld
+     rep movsb 
+     
+     pop bx        
+     pop si
+     pop di
+     pop cx
+     pop ax
+  ret   
    
   remove_part:  
       mov grow_state,SMALLER 
-      mov one_before,1       ; signs 'erase_tail' to erase the one-before-last part 
+      mov one_before,1       ; signs 'erase_tail' to erase the one-before-last part
+      call rewind_chars_in_alphabet 
       call erase_tail 
   ret                        ; used by 'check_eating' 
    
@@ -475,10 +562,60 @@ erase_tail: ; erases last part in snake. if one_before==1 then one before last p
      mov al,' '  
      mov bl,0 
      int 10h 
-  ret ; used by: 'actions'  
+  ret ; used by: 'actions'
+  
+  rewind_chars_in_alphabet: 
+     push bx
+     push ax
+     push si
+     push di
+     push cx
+     push dx
+    
+     ; sending to es beginning of the video memory
+     push 0b800h
+     pop es
+    
+     xor bx, bx  
+     mov ax,length 
+     shl ax,2 
+     add bx,ax 
+     sub bx,8
+     ; set cursor-x 
+     mov dl,ds:[bx]  
+     ; set cursor-y 
+     inc bx 
+     mov dh,ds:[bx]
+     mov bh,0
+     mov ah, 2                  ; set cursr to selected position
+     int 10h
+     mov ah, 8                  ; mov to ah attribute of char, to al - ascii of char
+     
+     mov si, ax                 ; save char to si
+     
+     xor bx, bx
+     add bl, al
+     sub bx, 41h
+     xor ax, ax
+     mov ax, 4
+     mul bx
+     add bx, letters_addresses_begin
+     
+     mov cx, 2
+     mov di, bx
+     cld
+     rep 
+     
+     pop dx
+     pop cx
+     pop di
+     pop si
+     pop ax
+     pop bx    
+  ret  
    
   inc_random_values: ; increases variables that are used for random 
-                     ; food_x and food_y range: [0,80] and [0,25] respectively 
+                     ; food_x and food_y range: [0,80] and [6,25] respectively 
                      ; char and attribute range: [41h,5ah] and [1,ffh] respectively  
                      ; food_type range: [0,8] 
     inc food_x 
@@ -490,7 +627,7 @@ erase_tail: ; erases last part in snake. if one_before==1 then one before last p
     mov food_x,0 
     IRV_label1: 
     cmp food_y,25 
-    jnz IRV_label2 
+    jnz IRV_label2
     mov food_y,6 
     IRV_label2: 
     cmp char,5bh 
@@ -578,8 +715,20 @@ erase_tail: ; erases last part in snake. if one_before==1 then one before last p
       mov to_restart,0    
       mov direction_for_next_cycle,UP 
       mov direction,UP 
-      call clr_scr 
-      ; restarts snake 
+      ; call clr_scr 
+      ; restarts snake
+      
+      ; sending to es beginning of the video memory
+      push 0b800h
+      pop es
+            
+      ; draw alphabet
+      mov cx, 0fa0h
+      mov di, 00h
+      lea si, snake_world
+      cld
+      rep movsb
+       
       mov length,5 
       lea bx,snake 
       mov ds:[bx],0a14h  
