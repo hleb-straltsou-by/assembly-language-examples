@@ -1,0 +1,686 @@
+// 0
+
+.model small
+
+.stack 100h
+
+.data
+maxCMDSize equ 127
+cmd_size db ?
+cmd_text db maxCMDSize + 2 dup(0)
+sourcePath db maxCMDSize + 2 dup(0)
+destinationPath db maxCMDSize + 2 dup(0)
+removing_word db maxCMDSize + 2 dup(0)
+
+removing_word_length db ?
+
+sourceID dw 0
+destID dw 0
+
+maxWordSize equ 50
+buffer db maxWordSize + 2 dup(0)
+
+spaceSymbol equ ' '
+newLineSymbol equ 13
+returnSymbol equ 10
+tabulation equ 9
+
+ASCIIZendl equ 0
+
+startText db "Program is started", '$'
+badCMDArgsMessage db "Bad command-line arguments. I want only 2 arguments: source path and destination path", '$'
+badSourceText db "Cannot open source file", '$'
+badDestText db "Cannot open destination file", '$'
+fileNotFoundText db "File not found", '$'
+errorClosingSource db "Cannot close source file", '$'
+errorClosingDest db "Cannot close destination file", '$'
+endText db "Program is ended", '$'
+errorReadSourceText db "Error reading from source file", '$'
+errorWritingDestText db "Error writing to destination file", '$'
+
+period equ 2
+currWordStartingValue equ 0
+currWordIndex db currWordStartingValue	; initial value for checking deleting from first value	
+
+.code
+
+main:
+	mov ax, @data
+	mov es, ax
+    
+    ; 80h of PSP - size of cmd string
+    ; 81h of PSP - cmd string with 0dh
+	xor ch, ch
+	mov cl, ds:[80h]			; ds stay at the beginnin of the PSP yet
+	mov cmd_size, cl 		    ; save size of cmd params
+	mov si, 81h
+	mov di, offset cmd_text
+	rep movsb
+
+	mov ds, ax
+
+	println startText
+
+	call parseCMD
+	cmp ax, 0
+	jne endMain				; check exception 
+
+	call openFiles
+	cmp ax, 0
+	jne endMain				; check exception
+
+	call processingFile
+	cmp ax, 0
+	jne endMain				; check exception
+
+	call closeFiles
+	cmp ax, 0
+	jne endMain				; check exception
+
+endMain:
+	;exit
+	println endText
+
+	mov ah, 4Ch
+	int 21h
+
+println MACRO info
+	push ax
+	push dx
+
+	mov ah, 09h
+	mov dx, offset info
+	int 21h
+
+	;print new line
+	mov dl, 10
+	mov ah, 02h
+	int 21h
+
+	mov dl, 13
+	mov ah, 02h
+	int 21h
+
+	pop dx
+	pop ax
+ENDM
+
+;MACRO HELP
+cmpWordLenWith0 MACRO textline, is0Marker
+	push si
+	mov si, offset textline
+	call strlen
+	pop si
+	cmp ax, 0
+	je is0Marker
+ENDM
+;end macro help
+
+
+;Result in ax: 0 if all is good, else not
+parseCMD PROC
+	push bx
+    push cx
+    push dx
+
+	mov cl, cmd_size
+	xor ch, ch
+
+	mov si, offset cmd_text
+	mov di, offset buffer
+	call rewriteAsASCIIZWord
+
+	mov di, offset sourcePath
+	call rewriteAsASCIIZWord
+
+	cmpWordLenWith0 sourcePath, badCMDArgs
+
+	mov di, offset destinationPath
+	call rewriteAsASCIIZWord
+
+	cmpWordLenWith0 destinationPath, badCMDArgs
+	
+	mov di, offset removing_word
+	call rewriteAsASCIIZWord
+
+	cmpWordLenWith0 destinationPath, badCMDArgs
+
+	mov di, offset buffer
+	call rewriteAsASCIIZWord
+
+	cmpWordLenWith0 buffer, argsIsGood
+
+badCMDArgs:
+	println badCMDArgsMessage
+	mov ax, 1
+
+	jmp endproc
+
+argsIsGood:
+	mov ax, 0
+
+endproc:
+	pop  dx
+    pop cx
+    pop bx
+	ret	
+ENDP
+
+;ds:si - offset, where needed ASCIIZ string is located
+;RES: ax - length
+strlen PROC
+	push bx
+    push si
+	xor ax, ax
+
+startCalc:
+	mov bl, ds:[si] 
+	cmp bl, ASCIIZendl
+	je endCalc
+
+	inc si
+	inc ax
+	jmp startCalc
+	
+endCalc:
+	pop si
+    pop bx
+	ret
+ENDP
+
+;ds:si - offset, where we will find (result stop will be in si too)
+;es:di - offset, where word will be
+;cx - maximum size of word (input)
+;result will be ASCIIZ
+rewriteAsASCIIZWord PROC
+	push ax 
+    push cx
+    push di
+	
+loopParseWord:
+	mov al, ds:[si]
+	cmp al, spaceSymbol
+	je isStoppedSymbol
+
+	cmp al, newLineSymbol
+	je isStoppedSymbol
+
+	cmp al, tabulation
+	je isStoppedSymbol
+
+	cmp al, returnSymbol
+	je isStoppedSymbol
+
+	cmp al, ASCIIZendl
+	je isStoppedSymbol
+
+	mov es:[di], al
+
+	inc di
+	inc si
+
+	loop loopParseWord
+
+isStoppedSymbol:
+	mov al, ASCIIZendl
+	mov es:[di], al
+	inc si
+
+	pop di
+    pop cx
+    pop ax
+	ret
+ENDP
+
+;Result in ax: 0 if all is good, else not
+openFiles PROC
+	push bx
+    push dx
+
+	;open source
+	mov ah, 3Dh			;open source file
+	mov al, 20h			;readonly, block write, other cannot write (DOS 3.0+)
+	mov dx, offset sourcePath
+	mov cl, 01h			;readOnly
+	int 21h
+
+	jb badOpenSource	;works when cf = 1
+
+	mov sourceID, ax	;save file ID
+
+	;open destination
+	mov ah, 3Ch
+	mov cx, 00h			;not readOnly
+	mov dx, offset destinationPath
+	int 21h
+
+	jb badOpenDest		;works when cf = 1
+
+	mov destID, ax		;save file ID
+
+	mov ax, 0			;return value
+	jmp endOpenProc		;all is good
+
+badOpenSource:
+	println badSourceText
+	cmp ax, 02h
+	jne errorFound
+
+	println fileNotFoundText
+
+	jmp errorFound
+
+badOpenDest:
+	println badDestText
+	cmp ax, 02h
+	jne errorFound
+
+	println fileNotFoundText
+
+errorFound:
+	mov ax, 1
+endOpenProc:
+	pop dx
+    pop bx
+	ret
+ENDP
+
+;macro help processing
+
+;bx - id of file
+resetPosInFileToStart MACRO
+	push ax
+    push bx
+    push cx
+    push dx
+
+	mov ah, 42h         ; set pointer of reading/writing of file to specified address
+	xor al ,al 			; mov al, 0 - replace pointer to the beginning of file
+	xor cx, cx
+	xor dx, dx			; also specify 0 for relative replacing 
+	int 21h
+
+	pop dx 
+    pop cx 
+    pop bx 
+    pop ax
+ENDM
+
+readFromFileAndCheckFinish MACRO
+	call readFromFile           ; copy to buffer symbols from file (according max size of word)
+	cmp ax, 0                   ; if ax = 0 - end of file (EOF)
+	je finishProcessing
+
+	mov si, offset buffer
+	mov di, offset buffer
+	mov cx, ax					; save num of symbols in buffer
+	xor dx, dx
+ENDM
+
+divCurrWordIndex MACRO
+	mov al, currWordIndex
+	xor ah, ah
+
+	push bx
+	mov bl, period
+	div bl
+	pop bx
+	;ah - ???????, al - ???????
+	mov currWordIndex, ah
+
+	cmp ah, 0
+	je movToSkip
+	jmp movToWrite
+
+ENDM
+;end macro help
+
+processingFile PROC
+	push ax 
+    push bx 
+    push cx 
+    push dx 
+    push si 
+    push di
+
+	mov bx, sourceID
+	resetPosInFileToStart
+
+	mov bx, destID
+	resetPosInFileToStart
+	
+	readFromFileAndCheckFinish
+
+loopProcessing:
+	;bx - how much good symbols in buffer
+	;save to di address of input removing_word
+	lea dx, removing word
+	;if ax - 0 word in substring is not found
+	;if ax - 1 subsring in string is found
+	call search_word
+	cmp ax, 1
+	je finishProcessing
+
+	mov bl, currWordStartingValue
+	mov currWordIndex, bl
+
+notNewLine:
+	call checkEndBuff
+	cmp ax, 2
+	je finishProcessing
+	cmp ax, 1
+	je writeDelimsAgain
+
+	divCurrWordIndex
+
+movToWrite:
+	call writeString
+	add dx, bx
+	call checkEndBuff
+	cmp ax, 2
+	je finishProcessing
+	cmp ax, 1
+	je movToWrite
+
+	jmp endWriteSkip
+
+movToSkip:
+	call skipString
+	call checkEndBuff
+	cmp ax, 2
+	je finishProcessing
+	cmp ax, 1
+	je movToSkip
+
+	jmp endWriteSkip
+
+endWriteSkip:
+	push dx
+	mov dl, currStringIndex
+	inc dl
+	mov currStringdIndex, dl 			;we skip/write one word
+	pop dx
+
+	;temp: close loop
+	;jmp finishProcessing
+
+	jmp loopProcessing
+
+finishProcessing:
+	mov cx, dx
+	call writeToFile
+
+	pop di 
+    pop si 
+    pop dx 
+    pop cx 
+    pop bx 
+    pop ax
+	ret
+ENDP
+
+;Result in ax: 0 if all is good, else not
+closeFiles PROC
+	push bx 
+    push cx
+
+	xor cx, cx
+
+	mov ah, 3Eh
+	mov bx, sourceID
+	int 21h
+
+	jnb goodCloseOfSource		;cf = 0
+
+	println errorClosingSource
+	inc cx 			;now it is a counter of errors
+
+goodCloseOfSource:
+	mov ah, 3Eh
+	mov bx, destID
+	int 21h
+
+	jnb goodCloseOfDest			;cf = 0
+
+	println errorClosingDest
+	inc cx 			;now it is a counter of errors
+
+goodCloseOfDest:
+	mov ax, cx 		;save number of errors
+
+	pop cx 
+    pop bx
+	ret
+ENDP
+
+;ds:si - offset to byte source (will change)
+;es:di - offset to byte destination (will change)
+;cx - max length (will change)
+;RES
+;	bx - num of writing symbols
+;	ax - num of newline symbols it writed in current calling (0 or more)
+writeDelims PROC
+	push dx
+	xor bx, bx
+	xor dx, dx
+
+startWriteDelimsLoop:
+	mov al, ds:[si]
+	cmp al, spaceSymbol
+	je isDelim
+
+	cmp al, tabulation
+	je isDelim
+
+	cmp al, newLineSymbol
+	je isNewLineSymbol
+
+	cmp al, returnSymbol
+	je isDelim
+
+	jmp isNotDelim
+
+isNewLineSymbol:
+	inc dx
+isDelim:
+	movsb
+	inc bx
+	loop startWriteDelimsLoop
+
+isNotDelim:
+	mov ax, dx
+
+	pop dx
+	ret
+ENDP
+
+;ds:si - offset, where we will find (will change)
+;es:di - offset, where word will be (will change)
+;cx - maximum size of word (will change)
+;bx - num of writing symbols
+writeWord PROC
+	push ax 
+	xor bx, bx
+
+loopParseWordWW:
+	mov al, ds:[si]
+	cmp al, spaceSymbol
+	je isStoppedSymbolWW
+
+	cmp al, newLineSymbol
+	je isStoppedSymbolWW
+
+	cmp al, tabulation
+	je isStoppedSymbolWW
+
+	cmp al, returnSymbol
+	je isStoppedSymbolWW
+
+	cmp al, ASCIIZendl
+	je isStoppedSymbolWW
+
+	movsb
+	inc bx
+	loop loopParseWordWW
+
+isStoppedSymbolWW:
+	pop ax
+	ret
+ENDP
+
+;ds:si - offset, where we will find (will change)
+;cx - maximum size of word (will change)
+;bx - num of skipped symbols
+skipWord PROC
+	push ax
+	xor bx, bx
+	
+loopParseWordSW:
+	mov al, ds:[si]
+	cmp al, spaceSymbol
+	je isStoppedSymbolSW
+
+	cmp al, newLineSymbol
+	je isStoppedSymbolSW
+
+	cmp al, tabulation
+	je isStoppedSymbolSW
+
+	cmp al, returnSymbol
+	je isStoppedSymbolSW
+
+	cmp al, ASCIIZendl
+	je isStoppedSymbolSW
+
+	inc si
+	inc bx
+	loop loopParseWordSW
+
+isStoppedSymbolSW:
+	pop ax
+	ret
+ENDP
+
+;reads to buffer maxWordSize symbols
+;RES: ax - how much symbols we read
+readFromFile PROC
+	push bx 
+    push cx 
+    push dx
+
+	mov ah, 3Fh
+	mov bx, sourceID
+	mov cx, maxWordSize
+	mov dx, offset buffer
+	int 21h
+
+	jnb goodRead					;cf = 0 - we read file
+
+	println errorReadSourceText
+	mov ax, 0
+
+goodRead:
+	pop dx 
+    pop cx 
+    pop bx
+	ret
+ENDP
+
+;cx - size to write from begin of buffer
+;RES: ax - number of writed bytes
+writeToFile PROC
+	push bx 
+    push cx 
+    push dx
+
+	mov ah, 40h
+	mov bx, destID
+	mov dx, offset buffer
+	int 21h
+
+	jnb goodWrite					;cf = 0 - we read file
+
+	println errorWritingDestText
+	mov ax, 0
+
+goodWrite:
+	pop dx 
+    pop cx 
+    pop bx
+	ret
+ENDP
+
+;save registers in required values
+;RES:
+;	ax = 0 - not end of buffer
+;	ax = 1 - end of buffer
+;	ax = 2 - end of processing
+checkEndBuff PROC
+	cmp cx, 0
+	jne notEndOfBuffer
+
+	cmp dx, 0
+	je skipWrite
+
+	mov cx, dx
+	call writeToFile
+
+skipWrite:
+	call readFromFile
+	cmp ax, 0
+	je endOfProcessing
+
+	mov si, offset buffer
+	mov di, offset buffer
+	mov cx, ax					;save num of symbols in buffer
+	xor dx, dx
+
+	mov ax, 1
+	ret
+
+endOfProcessing:
+	mov ax, 2
+	ret
+
+notEndOfBuffer:
+	mov ax, 0
+	ret
+ENDP
+
+; Procedure for searching entry of substring, which address is stored in di,
+; in main string, which address is stored in si.
+; if entry point of substring is found then ax = 1, else ax = 0
+; si - string
+; di - substring
+; bx - length of string
+; dx - length of substring
+search_word proc   
+    push cx
+    cld
+    dec dx 
+    sub cx ,dx       ; cx=cx-(dx-1)
+ 
+    lodsb            ; first letter of string
+repeat:       
+    repne scasb      ; search first letter of substring(di) in string(si)
+    jne not_found
+    push di 
+    push si 
+    push cx
+    mov  cx,bx       ; in cx left letters of string   
+    repe cmpsb       ; compare left letters of string with substring
+    pop cx
+    pop si
+    pop di
+    jne repeat          ; if not correspont - repeat searching
+ 
+    ; substring is fount
+    mov ax, 1
+    jmp finish
+not_found:       
+    xor     ax,ax       ; ax=0, string doen't include substring
+finish:
+    pop cx           
+search_word endp
+
+end main
